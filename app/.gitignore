@@ -1,0 +1,6 @@
+.venv
+.vscode
+*.swp
+__pycache__
+data
+prompts
