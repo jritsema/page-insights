@@ -24,7 +24,7 @@
     function ButtonClickAction(event) {
       button.innerHTML = 'Processing...';
 
-      const model = "bedrock/anthropic.claude-v2:1"
+      const model = "bedrock/anthropic.claude-3-sonnet-20240229-v1:0"
       const url = encodeURIComponent(window.location.href);
       const title = document.title;
       const baseUrl = "https://1234567890.execute-api.us-east-1.amazonaws.com/";

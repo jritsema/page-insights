@@ -1,4 +1,4 @@
-import os 
+import os
 import json
 from datetime import datetime
 import boto3
@@ -6,14 +6,14 @@ from litellm import completion
 
 s3 = boto3.client("s3")
 
+
 def get_s3_key(id):
     return f"{id}.json"
 
 
 def inference(prompt, model, temperature=0):
     msg = [{"role": "user", "content": prompt, }]
-    res = completion(model=model, messages=msg,
-                     max_tokens=4096, temperature=temperature)
+    res = completion(model=model, messages=msg, max_tokens=4096)
     result = res.choices[0].message.content
     print(result)
     return result
